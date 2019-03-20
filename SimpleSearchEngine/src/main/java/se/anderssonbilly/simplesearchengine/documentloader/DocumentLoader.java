@@ -1,5 +1,7 @@
 package se.anderssonbilly.simplesearchengine.documentloader;
 
-public abstract class DocumentLoader {
+import java.util.Map;
 
+public abstract class DocumentLoader {
+public abstract Map<String, String> getDocumentStringMap();
 }
