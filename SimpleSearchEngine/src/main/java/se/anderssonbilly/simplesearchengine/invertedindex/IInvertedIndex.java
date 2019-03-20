@@ -10,5 +10,4 @@ public interface IInvertedIndex {
 	public void setLoader(DocumentLoader loader);
 	public Map<String,Map<String,TfIdf>> getInvertedIndex();
 	
-	
 }
