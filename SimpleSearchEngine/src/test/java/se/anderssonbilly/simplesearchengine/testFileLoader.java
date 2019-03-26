@@ -42,7 +42,16 @@ class testFileLoader {
 
 		assertTrue(test.containsAll(expected.keySet()) && !test.contains("Document 3.txt"));
 	}
-
+	
+	@Test
+	void testTfIdf() {
+		double expected = 0.05068313851352055;
+		
+		double testTfIdf = index.getInvertedIndex().get("fox").get("Document 1.txt").getTfIdf();
+		
+		assertEquals(expected,testTfIdf);
+	}
+	
 	@Test
 	void testFilter() {
 		List<String> filter = new ArrayList<String>();

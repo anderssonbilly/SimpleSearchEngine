@@ -79,6 +79,15 @@ class testStringLoader {
 	}
 
 	@Test
+	void testTfIdf() {
+		double expected = 0.05068313851352055;
+		
+		double testTfIdf = index.getInvertedIndex().get("fox").get("doc_1").getTfIdf();
+		
+		assertEquals(expected,testTfIdf);
+	}
+	
+	@Test
 	void testClassType() {
 		assertTrue(loader instanceof DocumentLoader);
 	}

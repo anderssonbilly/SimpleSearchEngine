@@ -51,7 +51,7 @@ public class InvertedIndex implements IInvertedIndex{
 					}
 					TfIdf tfIdf = docTfIdfMap.get(docName);
 					if(tfIdf == null)
-						tfIdf = new TfIdf(terms.length, docTfIdfMap.size());
+						tfIdf = new TfIdf(terms.length, docsMap.size());
 					tfIdf.setTermCount(tfIdf.getTermCount() +1);
 					docTfIdfMap.put(docName, tfIdf);
 				}
